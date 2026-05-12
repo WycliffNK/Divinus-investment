@@ -94,7 +94,7 @@ export default function About() {
 
       {/* Story */}
       <section style={{ padding: "100px 0", background: "var(--bg-2)", borderTop: "1px solid var(--border)" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px", maxWidth: 760 }}>
+        <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 32px" }}>
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>Our Story</p>
           <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500, lineHeight: 1.15, marginBottom: 32 }}>Why We Were Built.</h2>
           <p style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.75, marginBottom: 20 }}>
