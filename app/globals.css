@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-ibm-mono);
+
+  --color-bg:        #FBF9F4;
+  --color-bg-2:      #F2EDE3;
+  --color-bg-3:      #ECE7DD;
+  --color-ink:       #0E1C2F;
+  --color-ink-2:     #243448;
+  --color-ink-3:     #5a6a7e;
+  --color-gold:      #C9A84C;
+  --color-gold-dim:  #B58F3E;
+  --color-gold-pale: #fdf6e3;
+  --color-border:    #E2DACE;
+}
+
+:root {
+  --bg:        #FBF9F4;
+  --bg-2:      #F2EDE3;
+  --bg-3:      #ECE7DD;
+  --ink:       #0E1C2F;
+  --ink-2:     #243448;
+  --ink-3:     #5a6a7e;
+  --gold:      #C9A84C;
+  --gold-dim:  #B58F3E;
+  --gold-pale: #fdf6e3;
+  --border:    #E2DACE;
+
+  /* Semantic tokens — stay consistent across themes */
+  --surface:     #ffffff;    /* raised white panels */
+  --cta-bg:      #06111F;    /* CTA banner — always deep navy */
+  --cta-text:    #ffffff;
+  --btn-bg:      #0E1C2F;    /* primary button */
+  --btn-color:   #ffffff;
+  --nav-blur:    rgba(251, 249, 244, 0.88);
+}
+
+html[data-theme="dark"] {
+  --bg:        #0E1C2F;
+  --bg-2:      #162438;
+  --bg-3:      #1e3148;
+  --ink:       #FBF9F4;
+  --ink-2:     #E2DACE;
+  --ink-3:     #94a3b8;
+  --gold:      #D4B560;
+  --gold-dim:  #C9A84C;
+  --gold-pale: #1e3148;
+  --border:    #243448;
+
+  --surface:   #162438;
+  --cta-bg:    #06111F;      /* stays deep navy */
+  --cta-text:  #ffffff;
+  --btn-bg:    #C9A84C;      /* gold buttons in dark */
+  --btn-color: #0E1C2F;
+  --nav-blur:  rgba(14, 28, 47, 0.88);
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
