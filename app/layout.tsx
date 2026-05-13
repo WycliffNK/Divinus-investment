@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import AnimationsProvider from "@/components/animations/AnimationsProvider";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${dmSans.variable} ${ibmMono.variable}`}>
       <body className="flex flex-col min-h-screen">
         <SmoothScroll />
+        <AnimationsProvider />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

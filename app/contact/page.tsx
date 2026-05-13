@@ -28,10 +28,10 @@ export default function Contact() {
       <section style={{ padding: "100px 0 80px", background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 20 }}>Contact</p>
-          <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24 }}>
+          <h1 className="gsap-hero-title" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24 }}>
             Get in Touch.
           </h1>
-          <p style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 520, lineHeight: 1.6 }}>
+          <p className="gsap-fade-up" style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 520, lineHeight: 1.6 }}>
             Whether you are a client, a partner, or a person ready to join — there is a place for you here.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function Contact() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80, alignItems: "start" }}>
 
           {/* Info Column */}
-          <div>
+          <div className="gsap-slide-left">
             <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 24 }}>Contact Details</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
               {contactInfo.map((c) => (
@@ -66,7 +66,7 @@ export default function Contact() {
           </div>
 
           {/* Form Column */}
-          <div>
+          <div className="gsap-slide-right">
             {submitted ? (
               <div style={{ padding: 48, background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 16, textAlign: "center" }}>
                 <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--gold-pale)", border: "2px solid var(--gold)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontSize: 20 }}>✓</div>

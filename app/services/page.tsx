@@ -87,10 +87,10 @@ export default function Services() {
       <section style={{ padding: "100px 0 80px", background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 20 }}>Services</p>
-          <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24, maxWidth: 760 }}>
+          <h1 className="gsap-hero-title" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24, maxWidth: 760 }}>
             Our Services
           </h1>
-          <p style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 560, lineHeight: 1.6 }}>
+          <p className="gsap-fade-up" style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 560, lineHeight: 1.6 }}>
             Seven divisions. Each with a defined purpose. Each held to the same standard of excellence.
           </p>
         </div>
@@ -101,11 +101,11 @@ export default function Services() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           {services.map((s, i) => (
             <div key={s.id} id={s.id} style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 64, padding: "64px 0", borderBottom: i < services.length - 1 ? "1px solid var(--border)" : "none", alignItems: "start" }}>
-              <div>
+              <div className="gsap-slide-left">
                 <span style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, color: "var(--gold-dim)", letterSpacing: "0.1em", display: "block", marginBottom: 12 }}>{s.num}</span>
                 <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 500, lineHeight: 1.2 }}>{s.name}</h2>
               </div>
-              <div>
+              <div className="gsap-slide-right">
                 <p style={{ fontFamily: "var(--font-playfair)", fontSize: 20, fontStyle: "italic", color: "var(--ink-2)", marginBottom: 16, lineHeight: 1.4 }}>{s.tagline}</p>
                 <p style={{ fontSize: 15, color: "var(--ink-3)", marginBottom: 20 }}>{s.sub}</p>
                 <p style={{ fontSize: 16, color: "var(--ink-2)", lineHeight: 1.7, marginBottom: 28 }}>{s.body}</p>
@@ -131,11 +131,11 @@ export default function Services() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <div style={{ marginBottom: 56 }}>
             <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>Our Process</p>
-            <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500 }}>We Diagnose Before We Prescribe.</h2>
+            <h2 className="gsap-fade-up" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 500 }}>We Diagnose Before We Prescribe.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24 }}>
             {process.map((p) => (
-              <div key={p.step} style={{ padding: 32, background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12 }}>
+              <div key={p.step} className="gsap-card" style={{ padding: 32, background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 12 }}>
                 <span style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 13, color: "var(--gold)", display: "block", marginBottom: 16 }}>{p.step}</span>
                 <h3 style={{ fontFamily: "var(--font-playfair)", fontSize: 22, fontWeight: 500, marginBottom: 12 }}>{p.name}</h3>
                 <p style={{ color: "var(--ink-3)", fontSize: 15, lineHeight: 1.6 }}>{p.desc}</p>
@@ -147,7 +147,7 @@ export default function Services() {
 
       {/* CTA */}
       <section style={{ padding: "100px 0", background: "var(--cta-bg)", textAlign: "center" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
+        <div className="gsap-cta-reveal" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 500, color: "var(--cta-text)", marginBottom: 20 }}>Not Sure Where to Start?</h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 18, maxWidth: 480, margin: "0 auto 36px", lineHeight: 1.65 }}>Tell us what you are trying to build, and we&apos;ll point you to the right division.</p>
           <Link href="/contact" style={{ background: "var(--gold)", color: "var(--ink)", padding: "14px 32px", borderRadius: 8, textDecoration: "none", fontSize: 15, fontWeight: 600 }}>Contact Us →</Link>

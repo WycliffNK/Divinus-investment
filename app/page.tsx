@@ -24,16 +24,16 @@ export default function Home() {
       {/* ── HERO ── */}
       <section style={{ padding: "120px 0 100px", background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
-          <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 24 }}>
+          <p className="gsap-hero-eyebrow" style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 24 }}>
             Capital · Intelligence · Community
           </p>
-          <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 900 }}>
+          <h1 className="gsap-hero-title" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(44px, 7vw, 80px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 900 }}>
             This is <em style={{ fontStyle: "italic", color: "var(--gold-dim)" }}>Divinus</em>.
           </h1>
-          <p style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 640, lineHeight: 1.6, marginBottom: 44 }}>
+          <p className="gsap-hero-sub" style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 640, lineHeight: 1.6, marginBottom: 44 }}>
             Divinus Investment Group is a multi-division company operating across business strategy, AI-driven innovation, digital product development, financial education, community building, and social impact. We exist to build the infrastructure that serious growth requires — in organisations, in markets, and in people.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div className="gsap-hero-ctas" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <Link href="/services" style={{ background: "var(--btn-bg)", color: "var(--btn-color)", padding: "14px 28px", borderRadius: 8, textDecoration: "none", fontSize: 15, fontWeight: 500 }}>
               Explore the Group →
             </Link>
@@ -50,10 +50,10 @@ export default function Home() {
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>
             Group Overview
           </p>
-          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 20, maxWidth: 760 }}>
+          <h2 className="gsap-fade-up" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 20, maxWidth: 760 }}>
             One Group. Seven Divisions. One Direction.
           </h2>
-          <p style={{ fontSize: 18, color: "var(--ink-3)", maxWidth: 680, lineHeight: 1.65 }}>
+          <p className="gsap-fade-up" style={{ fontSize: 18, color: "var(--ink-3)", maxWidth: 680, lineHeight: 1.65 }}>
             Divinus Investment Group Limited is a diversified group company with a clear and deliberate architecture. Each division operates in a distinct domain — from strategic consultancy and AI innovation to community engagement and philanthropic impact — and each is connected by a shared standard of quality, purpose, and long-term thinking. We do not operate in silos.
           </p>
           <div style={{ marginTop: 32 }}>
@@ -71,10 +71,10 @@ export default function Home() {
             <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>
               Our Divisions
             </p>
-            <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 16 }}>
+            <h2 className="gsap-fade-up" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 16 }}>
               Built for Breadth. Governed by Standard.
             </h2>
-            <p style={{ fontSize: 18, color: "var(--ink-3)", maxWidth: 560 }}>
+            <p className="gsap-fade-up" style={{ fontSize: 18, color: "var(--ink-3)", maxWidth: 560 }}>
               Seven divisions. Each with a defined purpose. Each held to the same standard of excellence.
             </p>
           </div>
@@ -83,6 +83,7 @@ export default function Home() {
               <Link
                 key={d.num}
                 href={d.href}
+                className="gsap-card"
                 style={{ display: "flex", flexDirection: "column", gap: 14, padding: 32, background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 16, textDecoration: "none", color: "inherit", transition: "all 0.3s" }}
               >
                 <span style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, color: "var(--gold-dim)", letterSpacing: "0.1em" }}>{d.num}</span>
@@ -101,14 +102,14 @@ export default function Home() {
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>
             Divinus AI · Vision Africa
           </p>
-          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 32, maxWidth: 760 }}>
+          <h2 className="gsap-fade-up" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4.5vw, 52px)", fontWeight: 500, lineHeight: 1.1, marginBottom: 32, maxWidth: 760 }}>
             Africa Does Not Need to Catch Up. It Needs to Lead.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, marginBottom: 40 }}>
-            <p style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.7 }}>
+            <p className="gsap-slide-left" style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.7 }}>
               Divinus AI is the group&apos;s technology intelligence division. We work with organisations and institutions to design and deploy AI strategies grounded in African context and built for global relevance.
             </p>
-            <p style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.7 }}>
+            <p className="gsap-slide-right" style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.7 }}>
               The artificial intelligence revolution is not happening to Africa — it is happening in Africa. We intend to be the firm that helps navigate it with rigour, imagination, and commercial precision.
             </p>
           </div>
@@ -122,7 +123,7 @@ export default function Home() {
       <section style={{ padding: "100px 0", background: "var(--bg)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 72, alignItems: "center" }}>
-            <div>
+            <div className="gsap-slide-left">
               <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 16 }}>About</p>
               <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4vw, 44px)", fontWeight: 500, lineHeight: 1.15, marginBottom: 24 }}>
                 A Group Built with Intention.
@@ -137,7 +138,7 @@ export default function Home() {
                 About Divinus Investment Group →
               </Link>
             </div>
-            <div style={{ aspectRatio: "4/5", background: "linear-gradient(135deg, var(--gold-pale) 0%, var(--bg-3) 100%)", borderRadius: 16, border: "1px solid var(--border)", position: "relative" }}>
+            <div className="gsap-slide-right" style={{ aspectRatio: "4/5", background: "linear-gradient(135deg, var(--gold-pale) 0%, var(--bg-3) 100%)", borderRadius: 16, border: "1px solid var(--border)", position: "relative" }}>
               <div style={{ position: "absolute", inset: 24, border: "1px solid rgba(201,168,76,0.3)", borderRadius: 8 }} />
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function Home() {
 
       {/* ── FINAL CTA ── */}
       <section style={{ padding: "120px 0", background: "var(--cta-bg)", textAlign: "center" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
+        <div className="gsap-cta-reveal" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold)", marginBottom: 20 }}>
             There Is a Place for You Here.
           </p>
@@ -166,7 +167,7 @@ export default function Home() {
               </thead>
               <tbody>
                 {ctaRows.map((r) => (
-                  <tr key={r.who} style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                  <tr key={r.who} className="gsap-cta-row" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                     <td style={{ padding: "14px 16px", fontSize: 14, color: "rgba(255,255,255,0.75)" }}>{r.who}</td>
                     <td style={{ padding: "14px 16px" }}>
                       <Link href={r.href} style={{ color: "var(--gold)", fontSize: 14, textDecoration: "none", fontWeight: 500 }}>{r.where} →</Link>

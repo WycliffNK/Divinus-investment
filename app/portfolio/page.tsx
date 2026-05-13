@@ -20,10 +20,10 @@ export default function Portfolio() {
       <section style={{ padding: "100px 0 80px", background: "linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <p style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold-dim)", marginBottom: 20 }}>Portfolio</p>
-          <h1 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24 }}>
+          <h1 className="gsap-hero-title" style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 500, lineHeight: 1.05, letterSpacing: "-0.02em", marginBottom: 24 }}>
             Portfolio
           </h1>
-          <p style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 560, lineHeight: 1.6 }}>
+          <p className="gsap-fade-up" style={{ fontSize: 20, color: "var(--ink-3)", maxWidth: 560, lineHeight: 1.6 }}>
             A selection of engagements, programmes, and projects across the Divinus Group.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Portfolio() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: 24 }}>
             {projects.map((p, i) => (
-              <div key={i} style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
+              <div key={i} className="gsap-card" style={{ background: "var(--bg-2)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ height: 180, background: `linear-gradient(135deg, var(--bg-3) 0%, var(--gold-pale) 100%)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <span style={{ fontFamily: "var(--font-ibm-mono)", fontSize: 11, color: "var(--ink-3)", letterSpacing: "0.15em", textTransform: "uppercase" }}>Image placeholder</span>
                 </div>
@@ -71,7 +71,7 @@ export default function Portfolio() {
 
       {/* CTA */}
       <section style={{ padding: "100px 0", background: "var(--cta-bg)", textAlign: "center" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
+        <div className="gsap-cta-reveal" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
           <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 500, color: "var(--cta-text)", marginBottom: 20 }}>Want to Work With Us?</h2>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 18, maxWidth: 480, margin: "0 auto 36px", lineHeight: 1.65 }}>Tell us what you need — and let&apos;s see where we can build together.</p>
           <Link href="/contact" style={{ background: "var(--gold)", color: "var(--ink)", padding: "14px 32px", borderRadius: 8, textDecoration: "none", fontSize: 15, fontWeight: 600 }}>Get in Touch →</Link>
